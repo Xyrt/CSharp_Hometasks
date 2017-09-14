@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Keys
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var key = Console.ReadKey();
+            var spaceCount = 0;
+
+            while (key.Key != ConsoleKey.Escape)
+            {
+                key = Console.ReadKey();
+                if (key.Key == ConsoleKey.Spacebar)
+                {
+                    spaceCount++;
+                }
+            }
+           Console.WriteLine("\nSpaceBar count - " + spaceCount);
+           Console.ReadKey();
+        }
+    }
+}
