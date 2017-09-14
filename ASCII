@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ASCII
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int userValue;
+            char symbol;
+
+            Console.WriteLine("Enter a symbol");
+            userValue = Console.Read();
+
+            if (userValue >= 65 && userValue <= 90)
+            {
+                userValue += 32;
+                symbol = (char)userValue;
+                Console.WriteLine(symbol);
+                Console.ReadKey();
+            }
+            else if (userValue >= 97 && userValue <= 122)
+            {
+                userValue -= 32;
+                symbol = (char)userValue;
+                Console.WriteLine(symbol);
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine(userValue);
+                Console.ReadKey();
+            }
+        }
+    }
+}
