@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FromRightToLeft
+{
+    class Program
+    {
+        static void Main(string[] args)
+        { 
+            Console.WriteLine("Enter a number");
+            string value = Console.ReadLine();
+     
+            int numbers = int.Parse(value);
+
+            int res = 0;
+
+            while (numbers > 0)
+            {
+                res *= 10;
+                res += numbers % 10;
+                numbers /= 10;
+            }
+            Console.WriteLine(res);
+            Console.ReadKey();
+        }
+    }
+}
